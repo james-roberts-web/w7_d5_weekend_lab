@@ -1,30 +1,31 @@
 <template lang="html">
   <div class="app-container">
+    <div class="content-container">
 
-    <header>
-      <h1>Rocket Info</h1>
-    </header>
+      <header>
+        <h1>Rocket Info</h1>
+      </header>
 
-    <hr>
 
-    <div class="rocket-info">
-      <rocket-list class="rocket-list" :rockets="rockets"></rocket-list>
 
-      <rocket-detail class="rocket-detail" v:if="selectedRocket"
-      :rocket="selectedRocket"></rocket-detail>
+      <div class="rocket-info">
+        <rocket-list class="rocket-list" :rockets="rockets"></rocket-list>
 
+        <rocket-detail class="rocket-detail" v:if="selectedRocket"
+        :rocket="selectedRocket"></rocket-detail>
+
+      </div>
+
+
+
+      <div class="launch-info">
+
+        <launch-list class="launch-list" :launches="launches"></launch-list>
+
+        <launch-detail class="launch-detail" v:if="selectedLaunch"
+        :launch="selectedLaunch"></launch-detail>
+      </div>
     </div>
-
-    <hr>
-
-    <div class="launch-info">
-
-      <launch-list class="launch-list" :launches="launches"></launch-list>
-
-      <launch-detail class="launch-detail" v:if="selectedLaunch"
-      :launch="selectedLaunch"></launch-detail>
-    </div>
-
   </div>
 </template>
 
@@ -86,9 +87,12 @@ export default {
 
 .app-container {
 
-  margin: 5%;
+  margin: 0 20%;
   font-family: Helvetica, Arial, sans-serif;
-  width: 75%;
+}
+.content-container {
+  display: contents;
+  justify-content: center;
 }
 
 header {
@@ -107,9 +111,15 @@ header {
 }
 .rocket-list, .launch-list {
   width:25%;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 5px;
 }
 
 .rocket-detail, .launch-detail {
   width:75%;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 5px;
 }
 </style>

@@ -5,6 +5,7 @@
     <p>Description:</p>
     <p>{{ rocket.description}}</p>
     <p>First flight: {{ rocket.first_flight}}</p>
+    <p> </p>
   </div>
 </template>
 
