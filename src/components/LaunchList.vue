@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <ul>
-      <h3>Launches:</h3>
+      <h3>Launch Number:</h3>
       <launch-list-item v-for="(launch, index) in launches" :launch="launch" :key="index" ></launch-list-item>
     </ul>
   </div>

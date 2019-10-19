@@ -2,9 +2,11 @@
   <div class="app-container">
 
     <header>
-      <h1>Rockets</h1>
+      <h1>Rocket Info</h1>
     </header>
+
     <hr>
+
     <div class="rocket-info">
       <rocket-list class="rocket-list" :rockets="rockets"></rocket-list>
 
@@ -12,6 +14,9 @@
       :rocket="selectedRocket"></rocket-detail>
 
     </div>
+
+    <hr>
+
     <div class="launch-info">
 
       <launch-list class="launch-list" :launches="launches"></launch-list>
@@ -19,7 +24,7 @@
       <launch-detail class="launch-detail" v:if="selectedLaunch"
       :launch="selectedLaunch"></launch-detail>
     </div>
-    
+
   </div>
 </template>
 
@@ -79,7 +84,6 @@ export default {
 
 .app-container {
 
-
   margin: 5%;
   font-family: Helvetica, Arial, sans-serif;
   width: 75%;
@@ -95,11 +99,15 @@ header {
   justify-content: space-between;
 }
 
-.rocket-list {
+.rocket-info, .launch-info {
+  display: flex;
+  justify-content: center;
+}
+.rocket-list, .launch-list {
   width:25%;
 }
 
-.rocket-detail {
+.rocket-detail, .launch-detail {
   width:75%;
 }
 </style>
