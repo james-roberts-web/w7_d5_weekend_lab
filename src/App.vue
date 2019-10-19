@@ -1,13 +1,20 @@
 <template lang="html">
-  <h1>Rockets</h1>
+  <div class="">
+    <h1>Rockets</h1>
+    <rocket-list></rocket-list>
+  </div>
 </template>
 
 <script>
 
 import { eventBus } from '@/main.js';
+import RocketList from '@/components/RocketList.vue';
 
 export default {
   name: 'app',
+  components: {
+    "rocket-list": RocketList
+  },
 
   data() {
     return {
