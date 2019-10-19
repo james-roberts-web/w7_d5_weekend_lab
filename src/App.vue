@@ -39,6 +39,7 @@ import RocketDetail from '@/components/RocketDetail.vue';
 import LaunchList from '@/components/LaunchList.vue';
 import LaunchListItem from '@/components/LaunchListItem.vue';
 import LaunchDetail from '@/components/LaunchDetail.vue';
+import LaunchPatchImage from '@/components/LaunchPatchImage.vue';
 
 export default {
   name: 'app',
@@ -55,7 +56,8 @@ export default {
     "rocket-list": RocketList,
     "rocket-detail": RocketDetail,
     "launch-list": LaunchList,
-    "launch-detail": LaunchDetail
+    "launch-detail": LaunchDetail,
+    "launch-patch-image": LaunchPatchImage
   },
 
   mounted() {
