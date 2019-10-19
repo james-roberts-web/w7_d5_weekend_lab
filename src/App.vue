@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <h1>Rockets</h1>
-    <rocket-list></rocket-list>
+    <rocket-list :rockets="rockets"></rocket-list>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 
 import { eventBus } from '@/main.js';
 import RocketList from '@/components/RocketList.vue';
+import RocketListItem from '@/components/RocketListItem.vue';
 
 export default {
   name: 'app',
